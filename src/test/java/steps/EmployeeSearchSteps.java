@@ -11,11 +11,6 @@ import utils.ConfigReader;
 
 public class EmployeeSearchSteps extends CommonMethods {
 
-    @Given("user is navigated to HRMS")
-    public void user_is_navigated_to_hrms() {
-        openBrowser();
-    }
-
     @Given("user is logged in with valid admin credentials")
     public void user_is_logged_in_with_valid_admin_credentials() {
         LoginPage login = new LoginPage();
@@ -40,13 +35,26 @@ public class EmployeeSearchSteps extends CommonMethods {
     @When("click on search button")
     public void click_on_search_button() {
         EmployeeListPage emp = new EmployeeListPage();
-        click(emp.searchButton);
+        jsClick(emp.searchButton);
     }
 
     @Then("user see employee information is displayed")
     public void user_see_employee_information_is_displayed() {
         System.out.println("Info is displayed");
+        tearDown();
     }
+
+    @When("user enters valid employee name")
+    public void user_enters_valid_employee_name() {
+        EmployeeListPage emp = new EmployeeListPage();
+        sendText(emp.employeeNameField, "sohail");
+    }
+
+    @Given("user is navigated to HRMS")
+    public void user_is_navigated_to_hrms() {
+        openBrowser();
+    }
+
 }
 
-//22.50
+//https://github.com/SyntaxTechnologies/CucumberFrameworkBatch10
