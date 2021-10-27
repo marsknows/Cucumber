@@ -49,6 +49,38 @@ Acceptance criteria -
 
 - valid username and invalid password
 
+Recap class 1 -
+
+What is cucumber framework?
+it supports BDD where we use gherkin language
+
+tags - Given When And Then Scenario Feature
+
+Given - Precondition
+When - Actions to be done
+Then - Expected output
+And - It is a supporting keyword that can be used with other keywords in a scenario
+
+
+What is step definition
+Step definition is the code implemented for the steps mentioned in feature file
+
+page object model design pattern
+
+Test runner
+We use test runner to execute all features in multiple combinations
+
+
+features = we define the path of our feature file here
+glue = we define the path of our steps here
+dry run = when it is set to true, it stops actual execution and scan all the steps
+strict=true, it checks all the steps definition
+monochrome = it removes all unreadable characters from the console output
+tags = we can segragate scenarios based on tags and can execute them accordingly
+
+
+
+
 
 
 

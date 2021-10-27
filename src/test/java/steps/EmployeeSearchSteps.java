@@ -41,7 +41,6 @@ public class EmployeeSearchSteps extends CommonMethods {
     @Then("user see employee information is displayed")
     public void user_see_employee_information_is_displayed() {
         System.out.println("Info is displayed");
-        tearDown();
     }
 
     @When("user enters valid employee name")
@@ -54,6 +53,8 @@ public class EmployeeSearchSteps extends CommonMethods {
     public void user_is_navigated_to_hrms() {
         openBrowser();
     }
+
+
 
 }
 
