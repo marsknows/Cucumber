@@ -2,7 +2,6 @@ Feature: Search employee
 
   @regression @sprint4
   Scenario: Search employee by id
- #  Given user is navigated to HRMS
    And user is logged in with valid admin credentials
    And user navigates to employee list page
    When user enters valid employee id
@@ -11,7 +10,6 @@ Feature: Search employee
 
  @regression @sprint4
   Scenario: Search employee by name
- #   Given user is navigated to HRMS
     And user is logged in with valid admin credentials
     And user navigates to employee list page
     When user enters valid employee name

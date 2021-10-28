@@ -78,10 +78,20 @@ strict=true, it checks all the steps definition
 monochrome = it removes all unreadable characters from the console output
 tags = we can segragate scenarios based on tags and can execute them accordingly
 
+Class 3 -
 
+Recap -
 
+Runner class - This is the configuration file in cucumber framework from we can execute our features.
 
+@RunWith - junit
+@CucumberOptions - features, glue, dryRun, monochrome, strict, tags,
 
+hooks - @Before - we use this to define our pre conditions
+        @After - we use this to define our post conditions
 
+what is the difference in between hooks and background?
+Background is feature file specific which will be limited to a feature
+Hooks are applicable for all the scenarios available in features
 
 
