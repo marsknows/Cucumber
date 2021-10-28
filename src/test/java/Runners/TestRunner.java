@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         //it keeps the console output for the cucumber test easily readable
         //it will remove all the unreadable character
         monochrome = true,
-        tags = "@1027"
+        tags = "@datatable"
         //strict=true, it check all the steps definition
 )
 

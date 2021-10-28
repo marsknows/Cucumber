@@ -26,3 +26,33 @@ Feature: Add Employee
     And user clicks on save button
     Then employee added successfully
 
+  @1028
+  Scenario: adding an employee from feature file
+    And user enters "Mike12" "lopez" and "meme"
+    And user clicks on save button
+    Then employee added successfully
+
+ @examples
+ Scenario Outline: adding an employee from feature file
+   And user enters "<firstName>" "<middleName>" and "<lastName>" for an employee
+   And user clicks on save button
+   Then employee added successfully
+   Examples:
+   |firstName|middleName|lastName|
+   |mike123  |meme      |lopez   |
+   |nailya321|meme      |reston  |
+   |sule456  | meme     |  abc   |
+
+
+
+   @datatable
+   Scenario: adding an employee using data table
+     When I add multiple employees and verify them that user has been added successfully
+       |firstName|middleName|lastName|
+       |mike123  |meme      |lopez   |
+       |nailya321|meme      |reston  |
+       |sule456  | meme     |  abc   |
+       |nailya33221|meme      |rerrston  |
+       |sule456233  | meme     |  arrrbc   |
+
+
