@@ -62,3 +62,8 @@ Feature: Add Employee
       |mike1566233  |meme      |lopez   |
       |nailya333213|meme      |reston  |
       |nailya4333213|meme      |reston  |
+
+
+  @excel
+  Scenario: Adding an employee from excel file
+    When user adds multiple employees from excel file usin "EmployeeData" sheet and verify the added employee

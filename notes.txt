@@ -159,5 +159,20 @@ Data table -
 
 
 
+HW - User should be able to modify employee personal details
+Driver's license no
+License exp date
+SSN
+SIN
+Gender
+Marital status
+Nationality
+DOB
+Nickname
+Smoker
+Military services
+
+
+
 
 
