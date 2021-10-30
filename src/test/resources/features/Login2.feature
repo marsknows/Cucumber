@@ -16,3 +16,5 @@ Feature: Error validation in login page
     |Admin1  |Hum@nhrm123|Invalid credentials|
     |Admin   |        |Password cannot be empty|
     |        | Hum@nhrm123  |Username cannot be empty|
+
+

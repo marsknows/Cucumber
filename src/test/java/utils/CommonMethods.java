@@ -72,16 +72,17 @@ public class CommonMethods {
     //class 4 methods
     //to take screenshot
     //break till 21.21
-    public static void takeScreenshot(String fileName){
+    public static byte[] takeScreenshot(String fileName){
         TakesScreenshot ts = (TakesScreenshot) driver;
+        byte[] picBytes = ts.getScreenshotAs(OutputType.BYTES);
         File sourceFile = ts.getScreenshotAs(OutputType.FILE);
-
         try{
             FileUtils.copyFile(sourceFile, new File(
                     Constants.SCREENSHOT_FILEPATH + fileName + " " + getTimeStamp("yyyy-MM-dd-HH-mm-ss") + ".png"));
         }catch (IOException e){
             e.printStackTrace();
         }
+        return picBytes;
     }
 
     public static String getTimeStamp(String pattern){

@@ -15,6 +15,6 @@ import org.junit.runner.RunWith;
 )
 
 
-public class TestRunner2 {
+public class Regression {
 
 }
