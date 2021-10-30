@@ -1,8 +1,10 @@
 package steps;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.AddEmployeePage;
 import pages.DashBoardPage;
 import utils.CommonMethods;
@@ -97,9 +99,45 @@ public class AddEmployeeSteps extends CommonMethods {
             DashBoardPage dash = new DashBoardPage();
             click(dash.addEmployeeButton);
             Thread.sleep(3000);
-
         }
 
     }
+
+    @When("user clicks on PIM option and Add Employee option")
+    public void user_clicks_on_pim_option_and_add_employee_option() {
+        DashBoardPage dash = new DashBoardPage();
+        click(dash.pimOption);
+        click(dash.addEmployeeButton);
+    }
+
+    @Then("user is navigates to add employee page")
+    public void user_is_navigates_to_add_employee_page() {
+        AddEmployeePage addEmployeePage = new AddEmployeePage();
+        //Assert.assertTrue(addEmployeePage.headerValue.isDisplayed());
+        String actualText = addEmployeePage.headerValue.getText();
+        String expectedText = "Add Employee";
+        Assert.assertEquals("Values dont match",actualText, expectedText);
+    }
+
+    @When("I add multiple employees and verify them that user has been added successfully in application")
+    public void i_add_multiple_employees_and_verify_them_that_user_has_been_added_successfully_in_application(DataTable employeeData) {
+        List<Map<String, String>> employeeNames =  employeeData.asMaps();
+        for(Map<String, String> employees : employeeNames){
+            String valueFirstName = employees.get("firstName");
+            String valueMiddleName = employees.get("middleName");
+            String valueLastName = employees.get("lastName");
+
+            AddEmployeePage addEmployeePage = new AddEmployeePage();
+            sendText(addEmployeePage.firtName, valueFirstName);
+            sendText(addEmployeePage.middleName, valueMiddleName);
+            sendText(addEmployeePage.lastName, valueLastName);
+            click(addEmployeePage.saveBtn);
+
+            DashBoardPage dash = new DashBoardPage();
+            click(dash.addEmployeeButton);
+
+        }
+    }
+
 
 }

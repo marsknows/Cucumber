@@ -6,9 +6,9 @@ import utils.CommonMethods;
 
 public class Hooks extends CommonMethods {
 
-    @Before
+  @Before
     public void start(){
-        openBrowser();
+       openBrowser();
     }
 
     @After

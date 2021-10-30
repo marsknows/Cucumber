@@ -37,6 +37,10 @@ public class AddEmployeePage extends CommonMethods {
     @FindBy(id="employeeId")
     public WebElement employeeId;
 
+    @FindBy(xpath = "//h1[text()='Add Employee']")
+    public WebElement headerValue;
+
+
 
     public AddEmployeePage(){
         PageFactory.initElements(driver, this);

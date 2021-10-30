@@ -55,4 +55,10 @@ Feature: Add Employee
        |nailya33221|meme      |rerrston  |
        |sule456233  | meme     |  arrrbc   |
 
-
+  @smoke @sprint12 @regression
+  Scenario: adding an employee using data table
+    When I add multiple employees and verify them that user has been added successfully in application
+      |firstName|middleName|lastName|
+      |mike1566233  |meme      |lopez   |
+      |nailya333213|meme      |reston  |
+      |nailya4333213|meme      |reston  |

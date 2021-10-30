@@ -100,3 +100,64 @@ mike123 meme lopez
 nailya321 meme reston
 sule456 meme abc
 
+
+
+REVIEW CLASS -
+
+What is BDD -
+behavioral driven development is a technique which allows us to write scenarios in plain english sentences.
+
+gherkin language
+
+Feature - To define the scope of feature file, this should be the first line of every feature file
+Scenario - it is considered as test cases in cucumber
+Given - pre-condition
+When - To perform actions
+And - Supporting tag
+Then - Expected result/output
+
+
+step definitions - we write the implemented steps here for all the feature files
+
+Test runner - it is a runner class which allows to configure various options for execution
+
+hooks - to write pre condition and post condition we use hooks
+@Before and @After
+
+
+Class 4 -
+
+
+Recap -
+
+Test runner -
+
+@RunWith -
+@CucumberOptions -
+features - path of our feature file
+glue - path of our steps package
+dryRun - if it is set to true, it checks all the definitions of steps if it is not implemented, it gives us snippet to implement
+monochrome - to avoid/remove all unreadable characters from console output
+tags - to define/filter scenarios for execution we use tags
+strict -
+
+Hooks -
+@Before - Pre condition
+@After - post condition
+
+Background -
+In a specific feature file, if we have common steps for all the scenarios, we write them in feature file
+
+Hooks is applicable to all the features whereas background is limited to one specific feature file
+
+
+Scenario and Scenario Outline difference -
+When we use examples table for data driven testing, we use scenario outline instead of scenario
+
+Data table -
+
+
+
+
+
+
