@@ -173,6 +173,52 @@ Smoker
 Military services
 
 
+Class 5
+
+Recap -
+Datatable as list - when we don't provide headers in the table
+excel reading example for adding the employees -
+plugins- pretty is responsible to print all the steps in the console
+html plugin generates cucumber.html report in target folder
+takeScreenshot Method - We use Scenario in hooks that accepts array of byte that's why we changed takescreenshot method in common methods class
+cucumber maven report - it generates json report in target under cucumber-html-report
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
