@@ -184,6 +184,8 @@ takeScreenshot Method - We use Scenario in hooks that accepts array of byte that
 cucumber maven report - it generates json report in target under cucumber-html-report
 
 
+mvn test -Dcucumber.options="--tags @test"
+mvn clean verify -Dcucumber.filter.tags="@test"
 
 
 
