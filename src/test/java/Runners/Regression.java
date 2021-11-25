@@ -9,9 +9,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "steps",
-        dryRun = false,
+        //dryRun = true,
         monochrome = true,
-        tags = "@datatable2"
+        tags = "@db",
+        publish = true,
+        plugin = "pretty"
 )
 
 

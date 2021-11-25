@@ -18,8 +18,6 @@ public class CommonMethods {
 
     public static WebDriver driver;
 
-
-
     public void openBrowser(){
         ConfigReader.readProperties(Constants.CONFIGURATION_FILEPATH);
         switch (ConfigReader.getPropertyValue("browser")) {
@@ -37,7 +35,7 @@ public class CommonMethods {
         }
 
         driver.get(ConfigReader.getPropertyValue("url"));
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
     }
 

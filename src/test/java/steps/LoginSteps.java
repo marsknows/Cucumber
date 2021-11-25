@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class LoginSteps extends CommonMethods {
     @When("user enters valid admin username and password")
-    public void user_enters_valid_admin_username_and_password() {
+    public void login() {
         LoginPage login = new LoginPage();
         sendText(login.usernameBox, ConfigReader.getPropertyValue("username"));
         sendText(login.passwordBox, ConfigReader.getPropertyValue("password"));
@@ -96,7 +96,6 @@ public class LoginSteps extends CommonMethods {
 
             String errorMessageActual = login.errorMessage.getText();
             Assert.assertEquals("Values do not match", errorMessageActual, errorMessageValue);
-
         }
     }
 
